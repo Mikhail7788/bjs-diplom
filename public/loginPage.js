@@ -11,8 +11,8 @@ user.loginFormCallback = logFunc => {
     });
 }
 
-user.registerFormCallback = logFunc => {
-    ApiConnector.register(logFunc, back => {
+user.registerFormCallback = regFunc => {
+    ApiConnector.register(regFunc, back => {
         if (back.success) {
             location.reload();
         } else {
