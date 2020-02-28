@@ -7,7 +7,7 @@ logOut.action = () => ApiConnector.logout(back => {
     }
 });
 
-//Получение current
+//Получение current profile
 ApiConnector.current(back => {
     if (back.success) {
         ProfileWidget.showProfile(back.data);
