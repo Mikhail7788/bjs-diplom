@@ -7,7 +7,6 @@ user.loginFormCallback = logFunc => {
         } else {
             user.setLoginErrorMessage(back.data);
         }
-        console.log(back); // объект возвращаемый колбеком при выполнении запроса к серверу при попытке авторизации
     });
 }
 
@@ -18,6 +17,5 @@ user.registerFormCallback = regFunc => {
         } else {
             user.setRegisterErrorMessage(back.data);
         }
-        console.log(back); // объект возвращаемый колбеком при выполнении запроса к серверу при попытке регистрации
     });
 }
