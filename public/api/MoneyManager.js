@@ -42,7 +42,7 @@ class MoneyManager {
     }
 
     sendMoneyAction(){
-        const amount = this.sendMoneyForm.querySelector('[placeholder="Сумма"]').value;
+        const amount += this.sendMoneyForm.querySelector('[placeholder="Сумма"]').value;
         const to = this.sendMoneyForm.getElementsByTagName('select')[0].value;
         const currency = this.sendMoneyForm.getElementsByTagName('select')[1].value;
         this.sendMoneyCallback({to, amount, currency});
