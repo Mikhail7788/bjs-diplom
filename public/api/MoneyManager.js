@@ -30,7 +30,7 @@ class MoneyManager {
 
     conversionMoneyAction(){
         const fromAmount = this.conversionMoneyForm.querySelector('[placeholder="Сумма"]').value;
-        const fromCurrency = this.conversionMoneyForm.getElementsByTagName('select')[0].value;
+        const fromCurrency = +this.conversionMoneyForm.getElementsByTagName('select')[0].value;
         const targetCurrency = this.conversionMoneyForm.getElementsByTagName('select')[1].value;
         this.conversionMoneyCallback({fromCurrency, targetCurrency, fromAmount});
         this.conversionMoneyForm.reset();
@@ -74,7 +74,7 @@ class MoneyManager {
         for (const key in data) {
             if (data.hasOwnProperty(key)) {
                 const element = data[key];
-                select.innerHTML += `<option value="${key}">${element}</option>`;
+                select.innerHTML += `<option value="${+key}">${element}</option>`;
             }
         }
     }
